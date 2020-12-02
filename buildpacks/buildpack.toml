@@ -1,0 +1,25 @@
+# Buildpack API version
+api = "0.4"
+
+# Buildpack ID and metadata
+[buildpack]
+  id = "io.mattmoor.golang.functions"
+  version = "0.0.0"
+  name = "Go Function Buildpacks"
+  homepage = "https://github.com/mattmoor/go-fn"
+
+[[order]]
+
+  [[order.group]]
+    id = "io.mattmoor.cloudevents.golang.functions"
+    version = "0.0.1"
+    optional = true
+
+  [[order.group]]
+    id = "io.mattmoor.http.golang.functions"
+    version = "0.0.3"
+    optional = true
+
+  [[order.group]]
+    id = "paketo-buildpacks/go"
+    version = "0.2.7"
